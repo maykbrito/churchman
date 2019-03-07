@@ -22,10 +22,12 @@ mongoose
 // ROUTES
 // ==============================================
 const churchs = require('./routes/api/churchs')
-
+const members = require('./routes/api/members')
+const events = require('./routes/api/events')
 
 app.use('/api/churchs', churchs)
-
+app.use('/api/members', members)
+app.use('/api/events', events)
 
 // RUN SERVER
 // ==============================================

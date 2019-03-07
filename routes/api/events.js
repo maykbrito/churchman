@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const validator = require('../../libs/Validator')
 
 //Events Model
 const Events = require('../../models/Events')
@@ -7,8 +8,8 @@ const Events = require('../../models/Events')
 // @route   GET api/events
 // @desc    Get All Events
 // @access  Public
-router.get('/', (req, res) => {
-    Events.find()
+router.get('/:church_id', (req, res) => {
+    Events.find({church_id: req.params.church_id})
     .sort({date: -1})
     .then((events) => res.json(events))
 })
@@ -16,12 +17,16 @@ router.get('/', (req, res) => {
 // @route   POST api/events
 // @desc    Post a Events
 // @access  Public
-router.post('/', (req, res) => {
+router.post('/:church_id', (req, res) => {
+
+    const event = req.body
+
     const newItem = new Events({
-        name: req.body.name,
-        date: req.body.date,
-        hour: req.body.hour,
-        place: req.body.place
+        church_id: req.params.church_id,
+        name: event.name,
+        date: event.date,
+        hour: event.hour,
+        place: event.place
     })
 
     newItem.save().then(event => res.json(event))
