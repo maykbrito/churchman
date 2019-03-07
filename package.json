@@ -1,0 +1,11 @@
+{
+  "name": "11-church_managment_mern",
+  "version": "1.0.0",
+  "description": "SAAS app to manage churchs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayk Brito",
+  "license": "MIT"
+}
