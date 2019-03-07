@@ -9,7 +9,6 @@ const db = require('./config/keys').mongoURI
 // ==============================================
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-const port = process.env.PORT || 5000;
 
 
 // DB
@@ -19,3 +18,16 @@ mongoose
 .then(() => console.log("Mongo connected"))
 .catch(err => console.log("Mongo error: ", err))
 
+
+// ROUTES
+// ==============================================
+const churchs = require('./routes/api/churchs')
+
+
+app.use('/api/churchs', churchs)
+
+
+// RUN SERVER
+// ==============================================
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Server started on port ${port}`))
