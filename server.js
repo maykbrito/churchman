@@ -21,11 +21,11 @@ mongoose
 
 // ROUTES
 // ==============================================
-const churchs = require('./routes/api/churchs')
-const members = require('./routes/api/members')
-const events = require('./routes/api/events')
-const records = require('./routes/api/records')
-const ministries = require('./routes/api/ministries')
+const churchs = require('./app/routes/api/churchs')
+const members = require('./app/routes/api/members')
+const events = require('./app/routes/api/events')
+const records = require('./app/routes/api/records')
+const ministries = require('./app/routes/api/ministries')
 
 app.use('/api/churchs', churchs)
 app.use('/api/members', members)

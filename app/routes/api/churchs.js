@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-//Churchs Model
 const Churchs = require('../../models/Churchs')
 
 // @route   GET api/churchs

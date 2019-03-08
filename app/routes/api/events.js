@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const validator = require('../../libs/Validator')
 
-//Events Model
 const Events = require('../../models/Events')
 
 // @route   GET api/events

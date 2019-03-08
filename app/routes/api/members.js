@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const validator = require('../../libs/Validator')
 
-//Members Model
 const Members = require('../../models/Members')
 
 // @route   GET api/members
