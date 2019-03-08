@@ -8,7 +8,7 @@ const Record = require('../../models/Records')
 // @desc    Get All Records
 // @access  Public
 router.get('/:church_id', (req, res) => {
-    Router.find({church_id: req.params.church_id})
+    Record.find({church_id: req.params.church_id})
     .sort({date: -1})
     .then(routes => {res.json(routes)})
 })
