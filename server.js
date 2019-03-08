@@ -24,10 +24,14 @@ mongoose
 const churchs = require('./routes/api/churchs')
 const members = require('./routes/api/members')
 const events = require('./routes/api/events')
+const records = require('./routes/api/records')
+// const ministries = require('./routes/api/ministries')
 
 app.use('/api/churchs', churchs)
 app.use('/api/members', members)
 app.use('/api/events', events)
+app.use('/api/records', records)
+// app.use('/api/ministries', ministries)
 
 // RUN SERVER
 // ==============================================
