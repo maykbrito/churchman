@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AppNavbar from './components/AppNavbar'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <AppNavbar/>
-      </div>
-    );
-  }
+import ChurchList from './components/ChurchList'
+
+const App = props => {
+  return (
+    <div className="App">
+      <AppNavbar/>
+      <ChurchList/>
+    </div>
+  )
 }
 
 export default App;
