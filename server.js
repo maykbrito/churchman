@@ -1,7 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const db = require('./config/keys').mongoURI
 
 
 // Configure
@@ -12,7 +12,7 @@ app.use(express.json());
 // DB
 // ==============================================
 mongoose
-.connect(db, { useNewUrlParser: true })
+.connect(process.env.DB, { useNewUrlParser: true })
 .then(() => console.log("Mongo connected"))
 .catch(err => console.log("Mongo error: ", err))
 
