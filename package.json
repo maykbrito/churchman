@@ -13,10 +13,9 @@
   "author": "Mayk Brito",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
-    "mongoose": "^5.4.17",
+    "mongoose": "^5.4.19",
     "nodemon": "^1.18.10"
   }
 }
