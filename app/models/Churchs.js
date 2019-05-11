@@ -1,9 +1,12 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 const ChurchsSchema = new Schema({
-    name: 		{ type: String, required: true },
-	created: 	{ type: Date, default: Date.now }
-})
+  name: { type: String, required: true },
+  created: { type: Date, default: Date.now },
+});
 
-module.exports = Churchs = mongoose.model('churchs', ChurchsSchema)
+const Churchs = mongoose.model('churchs', ChurchsSchema);
+
+module.exports = Churchs;

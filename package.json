@@ -18,5 +18,8 @@
     "express": "^4.16.4",
     "mongoose": "^5.4.19",
     "nodemon": "^1.18.10"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
   }
 }
