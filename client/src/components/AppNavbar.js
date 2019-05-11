@@ -22,7 +22,7 @@ const AppNavbar = () => {
     }
 
     return (
-        <Navbar color="light" light expand="md">
+        <Navbar data-element-name="navbar" color="light" light expand="md">
             <Container>
                 <NavbarBrand href="/">ChurchMan</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
